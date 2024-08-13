@@ -31,7 +31,7 @@ for i in range(len(cogs)):
 
 @client.event
 async def on_ready():
-    general_channel = client.get_channel(825025871705407512)
+    general_channel = client.get_channel()
     embed = discord.Embed(title='HyperCentipede at your service',description="yeah ik I'm dumb",color=0x11806a)
     await general_channel.send(embed=embed)
     await client.change_presence(status=discord.Status.idle,activity=discord.Activity(type=discord.ActivityType.watching,name = 'One Piece'))
@@ -109,7 +109,7 @@ async def on_command_error(cxt,error):
 @client.event
 async def on_member_join(member):
     #member_name, member_disc = member.split('#')
-    welcome = client.get_channel(850657566358503444)
+    welcome = client.get_channel()
     embed = discord.Embed(title="Welcome",description=f"Fancy meeting you here {member}",color=0xe91e63)
     embed.set_thumbnail(url=member.avatar_url)
     await welcome.send(embed=embed)
@@ -160,8 +160,8 @@ import discord
 from discord.ext import commands,tasks
 from pymongo import MongoClient
 
-bot_channel = 843016054233235466
-talk_channel = [825025871705407512,825029679697100800,825030202144063489,826849171524681800]
+bot_channel = 1
+talk_channel = [1,1,1,1]
 
 level = ["kouhai","senpai","sensei"]
 levelnum = [5,10,15]
